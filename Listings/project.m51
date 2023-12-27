@@ -1,0 +1,197 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    08/31/2023  15:44:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\project.obj TO .\Objects\project PRINT (.\Listings\project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\project.obj (PROJECT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\project (PROJECT)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         _DATA_GROUP_
+            IDATA   000EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     00E1H     UNIT         ?PR?MAIN?PROJECT
+            CODE    08E1H     003CH     UNIT         ?PR?_DELAY?PROJECT
+            CODE    091DH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0929H     0009H     UNIT         ?PR?STREETLIGHT?PROJECT
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project (PROJECT)
+
+
+SEGMENT                           DATA_GROUP 
+  +--> CALLED SEGMENT           START    LENGTH
+-----------------------------------------------
+?C_C51STARTUP                   -----    -----
+  +--> ?PR?MAIN?PROJECT
+
+?PR?MAIN?PROJECT                -----    -----
+  +--> ?PR?_DELAY?PROJECT
+  +--> ?PR?STREETLIGHT?PROJECT
+
+?PR?_DELAY?PROJECT              0008H    0006H
+  +--> ?PR?STREETLIGHT?PROJECT
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (PROJECT)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PROJECT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/31/2023  15:44:36  PAGE 2
+
+
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:08E5H         PUBLIC        _delay
+  C:0800H         PUBLIC        main
+  B:00B0H.7       PUBLIC        P1_G
+  B:0080H.1       PUBLIC        P2_G
+  B:0090H.0       PUBLIC        T1_G
+  B:0090H.3       PUBLIC        T2_G
+  B:0090H.6       PUBLIC        T3_G
+  B:00B0H.1       PUBLIC        T4_G
+  B:00B0H.4       PUBLIC        T5_G
+  B:00B0H.6       PUBLIC        P1_R
+  B:0080H.0       PUBLIC        P2_R
+  C:0929H         PUBLIC        streetlight
+  B:0090H.2       PUBLIC        T1_R
+  B:0090H.5       PUBLIC        T2_R
+  B:00B0H.0       PUBLIC        T3_R
+  B:00B0H.3       PUBLIC        T4_R
+  B:00B0H.5       PUBLIC        T5_R
+  B:0090H.1       PUBLIC        T1_Y
+  B:0090H.4       PUBLIC        T2_Y
+  B:0090H.7       PUBLIC        T3_Y
+  B:00B0H.2       PUBLIC        T4_Y
+  B:0080H.3       PUBLIC        LED
+  B:0080H.2       PUBLIC        LDR
+  -------         PROC          MAIN
+  C:0800H         LINE#         36
+  C:0800H         LINE#         37
+  C:0800H         LINE#         39
+  C:080AH         LINE#         40
+  C:0812H         LINE#         41
+  C:081CH         LINE#         42
+  C:0820H         LINE#         43
+  C:0824H         LINE#         44
+  C:082BH         LINE#         45
+  C:0835H         LINE#         46
+  C:083DH         LINE#         47
+  C:0847H         LINE#         48
+  C:084BH         LINE#         49
+  C:084FH         LINE#         50
+  C:0856H         LINE#         51
+  C:0856H         LINE#         52
+  C:0856H         LINE#         53
+  C:085CH         LINE#         54
+  C:0862H         LINE#         55
+  C:0865H         LINE#         56
+  C:0868H         LINE#         57
+  C:086AH         LINE#         58
+  C:086CH         LINE#         59
+  C:086FH         LINE#         60
+  C:0876H         LINE#         61
+  C:0878H         LINE#         62
+  C:087CH         LINE#         63
+  C:0882H         LINE#         65
+  C:0884H         LINE#         66
+  C:0886H         LINE#         67
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/31/2023  15:44:36  PAGE 3
+
+
+  C:0889H         LINE#         68
+  C:088CH         LINE#         69
+  C:088EH         LINE#         70
+  C:0890H         LINE#         71
+  C:0893H         LINE#         72
+  C:089AH         LINE#         73
+  C:089CH         LINE#         74
+  C:089EH         LINE#         76
+  C:08A0H         LINE#         77
+  C:08A2H         LINE#         78
+  C:08A5H         LINE#         79
+  C:08A8H         LINE#         80
+  C:08AAH         LINE#         81
+  C:08ACH         LINE#         82
+  C:08AFH         LINE#         83
+  C:08B6H         LINE#         84
+  C:08B8H         LINE#         85
+  C:08BAH         LINE#         87
+  C:08BEH         LINE#         88
+  C:08C2H         LINE#         89
+  C:08C5H         LINE#         90
+  C:08C8H         LINE#         91
+  C:08CAH         LINE#         92
+  C:08CCH         LINE#         93
+  C:08CFH         LINE#         94
+  C:08D6H         LINE#         95
+  C:08DAH         LINE#         96
+  C:08DEH         LINE#         97
+  -------         ENDPROC       MAIN
+  C:08E1H         SYMBOL        L?0017
+  -------         PROC          L?0016
+  -------         ENDPROC       L?0016
+  C:08E1H         SYMBOL        L?0017
+  -------         PROC          _DELAY
+  D:0008H         SYMBOL        a
+  -------         DO            
+  D:000AH         SYMBOL        i
+  D:000CH         SYMBOL        j
+  -------         ENDDO         
+  C:08E5H         LINE#         100
+  C:08E9H         LINE#         101
+  C:08E9H         LINE#         103
+  C:08F9H         LINE#         104
+  C:08F9H         LINE#         105
+  C:08FEH         LINE#         106
+  C:08FEH         LINE#         107
+  C:0901H         LINE#         108
+  C:0912H         LINE#         109
+  C:091CH         LINE#         110
+  -------         ENDPROC       _DELAY
+  -------         PROC          STREETLIGHT
+  C:0929H         LINE#         112
+  C:0929H         LINE#         113
+  C:0929H         LINE#         114
+  C:092CH         LINE#         115
+  C:092CH         LINE#         116
+  C:092EH         LINE#         117
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/31/2023  15:44:36  PAGE 4
+
+
+  C:092FH         LINE#         119
+  C:092FH         LINE#         120
+  C:0931H         LINE#         121
+  C:0931H         LINE#         122
+  -------         ENDPROC       STREETLIGHT
+  -------         ENDMOD        PROJECT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0126H BYTE (14%) *
+******************************************************************************
+
+Program Size: data=15.0 xdata=0 code=309
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

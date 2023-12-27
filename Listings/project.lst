@@ -1,0 +1,150 @@
+C51 COMPILER V9.60.7.0   PROJECT                                                           08/31/2023 15:44:36 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE PROJECT
+OBJECT MODULE PLACED IN .\Objects\project.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE project.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\p
+                    -roject.lst) TABS(2) OBJECT(.\Objects\project.obj)
+
+line level    source
+
+   1          #include <reg51.h>  // Standard 8051 defines
+   2          
+   3          sbit T1_R = P1^2;
+   4          sbit T1_Y = P1^1;
+   5          sbit T1_G = P1^0;
+   6          
+   7          sbit T2_R = P1^5;
+   8          sbit T2_Y = P1^4;
+   9          sbit T2_G = P1^3;
+  10          
+  11          sbit T3_R = P3^0;
+  12          sbit T3_Y = P1^7;
+  13          sbit T3_G = P1^6;
+  14          
+  15          sbit T4_R = P3^3;
+  16          sbit T4_Y = P3^2;
+  17          sbit T4_G = P3^1;
+  18          
+  19          sbit T5_R = P3^5;
+  20          sbit T5_G = P3^4;
+  21          
+  22          sbit P1_R = P3^6;
+  23          sbit P1_G = P3^7;
+  24          
+  25          sbit P2_R = P0^0;
+  26          sbit P2_G = P0^1;
+  27          
+  28          sbit LDR = P0^2;
+  29          sbit LED = P0^3;
+  30          // Define Signal pins
+  31          
+  32          // Initialize functions
+  33          void delay(unsigned int);
+  34          void streetlight();
+  35          
+  36          void main()
+  37          { 
+  38   1        // Initialize traffic light states
+  39   1        T1_R = T2_R = T3_R = T4_R = T5_R = 0;
+  40   1        T1_Y = T2_Y = T3_Y = T4_Y = 0;
+  41   1        T1_G = T2_G = T3_G = T4_G = T5_G = 0;
+  42   1        P1_R = P2_R = 0;
+  43   1        P1_G = P2_G = 0;
+  44   1        delay(100);
+  45   1        T1_R = T2_R = T3_R = T4_R = T5_R = 0;
+  46   1        T1_Y = T2_Y = T3_Y = T4_Y = 1;
+  47   1        T1_G = T2_G = T3_G = T4_G = T5_G = 1;
+  48   1        P1_R = P2_R = 1;
+  49   1        P1_G = P2_G = 0;
+  50   1        delay(100);
+  51   1        while(1)
+  52   1          {
+  53   2            T1_R = T5_R = P1_G = 1;
+  54   2            T1_G = T5_G = P1_R = 0;
+C51 COMPILER V9.60.7.0   PROJECT                                                           08/31/2023 15:44:36 PAGE 2   
+
+  55   2            streetlight();
+  56   2            delay(500);
+  57   2            T1_G = 1;
+  58   2            T1_Y = 0;
+  59   2            streetlight();
+  60   2            delay(300);
+  61   2            T1_Y = 1;
+  62   2            T5_G = P1_R = 1;
+  63   2            T1_R = T5_R = P1_G = 0;
+  64   2            
+  65   2            T2_R = 1;
+  66   2            T2_G = 0;
+  67   2            streetlight();
+  68   2            delay(500);
+  69   2            T2_G = 1;
+  70   2            T2_Y = 0;
+  71   2            streetlight();
+  72   2            delay(300);
+  73   2            T2_Y = 1;
+  74   2            T2_R = 0;
+  75   2            
+  76   2            T3_R = 1;
+  77   2            T3_G = 0;
+  78   2            streetlight();
+  79   2            delay(500);
+  80   2            T3_G = 1;
+  81   2            T3_Y = 0;
+  82   2            streetlight();
+  83   2            delay(300);
+  84   2            T3_Y = 1;
+  85   2            T3_R = 0;
+  86   2          
+  87   2            T4_R = P2_G = 1;
+  88   2            T4_G = P2_R = 0;
+  89   2            streetlight();
+  90   2            delay(500);
+  91   2            T4_G = 1;
+  92   2            T4_Y = 0;
+  93   2            streetlight();
+  94   2            delay(300);
+  95   2            T4_Y = P2_R = 1;
+  96   2            T4_R = P2_G = 0;
+  97   2          }
+  98   1      }
+  99          
+ 100          void delay(unsigned int a)
+ 101          {
+ 102   1        unsigned int i,j;
+ 103   1        for(i=0;i<a;i++)
+ 104   1        {
+ 105   2          for(j=0;j<1275;j++)
+ 106   2          {
+ 107   3            streetlight();
+ 108   3          }
+ 109   2        }
+ 110   1      }
+ 111          
+ 112          void streetlight()
+ 113          {
+ 114   1        if (LDR == 0)
+ 115   1        {
+ 116   2          LED = 0;
+C51 COMPILER V9.60.7.0   PROJECT                                                           08/31/2023 15:44:36 PAGE 3   
+
+ 117   2        }
+ 118   1        else
+ 119   1        {
+ 120   2          LED = 1;
+ 121   2        }
+ 122   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    294    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
