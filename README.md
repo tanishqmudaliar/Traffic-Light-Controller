@@ -250,4 +250,4 @@ In summary, when modifying the code without considering the circuit, attention s
 
 The Traffic Light Control System showcased in this project utilizes an 8051 microcontroller to effectively manage traffic lights, pedestrian signals, and streetlights. The primary objectives of this project are to ensure smooth traffic flow, prioritize pedestrian safety, and minimize power consumption for streetlights.
 
-[![Traffic Light Controller](https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fhyxlbwggak1x.png)](https://vpteduin8928-my.sharepoint.com/personal/tanishq_mudaliar_vpt_edu_in/_layouts/15/embed.aspx?UniqueId=6650946f-b0c6-4263-98de-7c38a62a2560&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create)
+[Example Video](https://vpteduin8928-my.sharepoint.com/personal/tanishq_mudaliar_vpt_edu_in/_layouts/15/embed.aspx?UniqueId=6650946f-b0c6-4263-98de-7c38a62a2560&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create)
