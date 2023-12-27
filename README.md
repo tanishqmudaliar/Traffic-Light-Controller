@@ -91,7 +91,7 @@ void delay(unsigned int);
 void streetlight();
 
 void main()
-{	
+{
 	// Initialize traffic light states
   T1_R = T2_R = T3_R = T4_R = T5_R = 0;
   T1_Y = T2_Y = T3_Y = T4_Y = 0;
@@ -118,7 +118,7 @@ void main()
 			T1_Y = 1;
 			T5_G = P1_R = 1;
 			T1_R = T5_R = P1_G = 0;
-			
+
 			T2_R = 1;
 			T2_G = 0;
 			streetlight();
@@ -129,7 +129,7 @@ void main()
 			delay(3000);
 			T2_Y = 1;
 			T2_R = 0;
-			
+
 			T3_R = 1;
 			T3_G = 0;
 			streetlight();
@@ -140,7 +140,7 @@ void main()
 			delay(3000);
 			T3_Y = 1;
 			T3_R = 0;
-		
+
 			T4_R = P2_G = 1;
 			T4_G = P2_R = 0;
 			streetlight();
@@ -250,4 +250,6 @@ In summary, when modifying the code without considering the circuit, attention s
 
 The Traffic Light Control System showcased in this project utilizes an 8051 microcontroller to effectively manage traffic lights, pedestrian signals, and streetlights. The primary objectives of this project are to ensure smooth traffic flow, prioritize pedestrian safety, and minimize power consumption for streetlights.
 
-[https://vpteduin8928-my.sharepoint.com/:v:/g/personal/tanishq_mudaliar_vpt_edu_in/EW-UUGbGsGNCmN58OKYqJWAB1CyFqkLkRUJqCANRzCTRhg?e=dfvLEi&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19](https://vpteduin8928-my.sharepoint.com/:v:/g/personal/tanishq_mudaliar_vpt_edu_in/EW-UUGbGsGNCmN58OKYqJWAB1CyFqkLkRUJqCANRzCTRhg?e=dfvLEi&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19)
+[![Now in Android: 55] // Title
+(https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)] // Thumbnail
+(https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55")
